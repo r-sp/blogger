@@ -1,5 +1,4 @@
 # Widget Entri Dictionary
-
 An easy way to create a [blogger template](https://rizkysaskiaputra.blogspot.com/p/template-blogger.html) is to recognize special data tags for bloggers, such as data tags for this blog entry, because this type of data tag is important as a main component for loading blogger content.
 
 Blog Widget is an *official Blogger* widget that will display the main page, index page, item page, posting page, static page, label page, archive page, search page and others.
@@ -17,4 +16,8 @@ Many bloggers outsmart to make "*Posts in accordance with certain labels*" with 
 Returning to the topic of the Data Tag Dictionary for Blog Entries on Blogger. There are two versions namely JSON and XML, JSON as proof to see whether it works or not, XML is a special data tag that is used to call or create certain content.
 
 ## TL;DR
-If the first or second version of the template use the v.1 / v.2 = version 1 button, and if the third version template uses the v.3 = version 2 button.
+Adjust the version of your template.
+
+ - Version **1**: [JSON](https://github.com/rizkysaskiaputra/blogger/blob/master/dictionary/widget/entri/1.json) (*read only*), [XML](https://github.com/rizkysaskiaputra/blogger/blob/master/dictionary/widget/entri/1.xml) (*rendered*)
+- Version **2**: [JSON](https://github.com/rizkysaskiaputra/blogger/blob/master/dictionary/widget/entri/2.json) (*read only*), [XML](https://github.com/rizkysaskiaputra/blogger/blob/master/dictionary/widget/entri/2.xml) (*rendered*)
+- Version **3**: [JSON](https://github.com/rizkysaskiaputra/blogger/blob/master/dictionary/widget/entri/3.json) (*read only*), [XML](https://github.com/rizkysaskiaputra/blogger/blob/master/dictionary/widget/entri/3.xml) (*rendered*)
