@@ -16,5 +16,5 @@ Many bloggers outsmart to make "*Posts in accordance with certain labels*" with 
 
 Returning to the topic of the Data Tag Dictionary for Blog Entries on Blogger. There are two versions namely JSON and XML, JSON as proof to see whether it works or not, XML is a special data tag that is used to call or create certain content.
 
-## ## TL;DR
+## TL;DR
 If the first or second version of the template use the v.1 / v.2 = version 1 button, and if the third version template uses the v.3 = version 2 button.
