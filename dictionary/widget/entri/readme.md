@@ -1,4 +1,4 @@
-# Widget Entri Dictionary
+## Widget Entri Dictionary
 An easy way to create a [blogger template](https://rizkysaskiaputra.blogspot.com/p/template-blogger.html) is to recognize special data tags for bloggers, such as data tags for this blog entry, because this type of data tag is important as a main component for loading blogger content.
 
 Blog Widget is an *official Blogger* widget that will display the main page, index page, item page, posting page, static page, label page, archive page, search page and others.
