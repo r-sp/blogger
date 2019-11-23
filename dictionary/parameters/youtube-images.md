@@ -1,4 +1,4 @@
-## Youtube image
+## Youtube images
 These parameters are intended for type data `IMAGE`. When one of these parameters is added to the name of a datum of this type, it will return a new value.
 
 The setting  `isYouTube` checks whether the image contains a thumbnail from the YouTube video service, while `youtubeMaxResDefaultUrl` providing the URL for the `maxresdefault.jpg` YouTube video image .
