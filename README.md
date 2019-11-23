@@ -1,9 +1,3 @@
----
-title: Blogger
-description: a documentation for blogger template developers
-url:"https://rizkysaskiaputra.github.io/blogger/"
----
-
 # blogger
 [https://rizkysaskiaputra.github.io/blogger/](https://rizkysaskiaputra.github.io/blogger/)
 
