@@ -18,8 +18,8 @@ Returning to the topic of the Data Tag Dictionary for Blog Entries on Blogger. T
 ## TL;DR
 Adjust the version of your template.
 
- - Version **1**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/1.json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/1.xml) (*rendered*)
-- Version **2**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/2.json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/2.xml) (*rendered*)
-- Version **3**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/3.json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/3.xml) (*rendered*)
+ - Version **1**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-1-type-json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-1-type-xml) (*rendered*)
+- Version **2**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-2-type-json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-2-type-xml) (*rendered*)
+- Version **3**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-3-type-json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-3-type-xml) (*rendered*)
 
-[updated](https://rizkysaskiaputra.blogspot.com/)
+[back to Entri](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri)
