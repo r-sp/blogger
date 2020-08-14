@@ -21,5 +21,3 @@ Adjust the version of your template.
  - Version **1**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-1-type-json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-1-type-xml) (*rendered*)
 - Version **2**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-2-type-json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-2-type-xml) (*rendered*)
 - Version **3**: [JSON](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-3-type-json) (*read only*), [XML](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/version-3-type-xml) (*rendered*)
-
-[back to Entri](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri)
