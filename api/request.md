@@ -1,4 +1,4 @@
-Request.js
+## Request.js
 
 This is another way of generating fake traffic by requesting a document via `<iframe>` and being directed to the origin or location of the document.
 
