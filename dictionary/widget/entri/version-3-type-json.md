@@ -1,4 +1,6 @@
-    "data": {
+ ## version 3 type json
+ ```
+ "data": {
       "widget": {
         "type": "Blog",
         "version": 2
@@ -129,3 +131,4 @@
         }]
       }]
     }
+```
