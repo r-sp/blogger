@@ -1,4 +1,6 @@
-    <b:widget id='Blog1' title='' type='Blog' version='1'>
+## version 1 type xml
+```
+  <b:widget id='Blog1' title='' type='Blog' version='1'>
       <b:includable id='main'>
         <data:title/>
         <data:description/>
@@ -170,3 +172,4 @@
         </b:loop>
       </b:includable>
     </b:widget>
+```
