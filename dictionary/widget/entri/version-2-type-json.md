@@ -1,4 +1,4 @@
-   ## version 2 type json
+## version 2 type json
    ```
    "data": {
       "widget": {
