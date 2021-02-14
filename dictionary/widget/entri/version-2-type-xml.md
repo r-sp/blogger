@@ -1,4 +1,4 @@
- ## version 2 type xml
+## version 2 type xml
  ```
   <b:widget id='Blog1' title='' type='Blog' version='1'>
       <b:includable id='main'>
