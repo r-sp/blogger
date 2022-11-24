@@ -1,7 +1,3 @@
-## blogger
-- [dictionary](https://rizkysaskiaputra.github.io/blogger/dictionary/)
-  - [parameters](https://rizkysaskiaputra.github.io/blogger/dictionary/parameters/)
-  - [widget](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/)
-    - [entri](https://rizkysaskiaputra.github.io/blogger/dictionary/widget/entri/)
+# Blogger
 
-[```index```](https://rizkysaskiaputra.github.io/)
+This archive was not maintained, perhaps in the future I could think about changes.
