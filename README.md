@@ -1,3 +1,3 @@
-# Blogger
+# blogger
 
-This archive was not maintained, perhaps in the future I could think about changes.
+Fun fact: [Blogger](https://blogger.com/) was the first platform that led me here.
