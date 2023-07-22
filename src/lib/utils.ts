@@ -3,6 +3,11 @@ async function getApi<T>(url: URL): Promise<T> {
   return fetch(url, {
     method: "GET",
   }).then((response) => {
+    /** show an error when the API response differs as expected */
+    if (!response.ok) {
+      throw new Error(`HTTP: error: ${response.status}`);
+    }
+    /** give back the response as promised */
     return response.json() as Promise<T>;
   });
 }
@@ -12,35 +17,18 @@ function createElement(
   target: HTMLElement = document.body,
   tagName: string,
   className: string,
-  textContent?: string,
-  attributes?: Record<string, string> & Readonly<{}>,
-  callback?: Function
+  textContent?: string
 ): HTMLElement {
+  /** create a new element */
   const newElement = document.createElement(tagName);
   target.appendChild(newElement);
-
   /** set a custom className */
   newElement.className = className;
-
   /** text content only appears when triggered */
   if (textContent) {
     const newContent = document.createTextNode(textContent);
     newElement.appendChild(newContent);
   }
-
-  /** set a custom element attributes */
-  if (attributes) {
-    Object.keys(attributes).forEach((key) => {
-      const value = attributes[key];
-      newElement.setAttribute(key, value);
-    });
-  }
-
-  /** don't try to use callbacks if it's not for the interaction of elements itself */
-  if (callback) {
-    callback();
-  }
-
   /** give back the element */
   return newElement;
 }

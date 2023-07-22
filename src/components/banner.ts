@@ -11,8 +11,7 @@ export function Banner({ blog }: { blog: OriginTypes }) {
   const stats = createElement(card, "p", "details", info);
 
   const lastOnline = "Last online: " + new Date(blog.updated).toLocaleString();
-  const status = createElement(card, "date", "status", lastOnline, {
-    datetime: lastOnline,
-  });
+  const status = createElement(card, "date", "status", lastOnline);
+  status.setAttribute("datetime", lastOnline);
   return { name, text, stats, status };
 }

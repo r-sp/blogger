@@ -5,15 +5,15 @@ export type OriginTypes = {
   description: string;
   published: string;
   updated: string;
-  url: string | URL;
-  selfLink: string | URL;
+  url: string;
+  selfLink: string;
   posts: {
     totalItems: number;
-    selfLink: string | URL;
+    selfLink: string;
   };
   pages: {
     totalItems: number;
-    selfLink: string | URL;
+    selfLink: string;
   };
   locale: {
     language: string;
@@ -22,8 +22,9 @@ export type OriginTypes = {
   };
 };
 
-export type BlogPostsTypes = {
+export type BlogItemsTypes = {
   kind: string;
+  nextPageToken: string;
   items: Array<{
     kind: string;
     id: string;
@@ -32,50 +33,23 @@ export type BlogPostsTypes = {
     }>;
     published: string;
     updated: string;
-    url: string | URL;
-    selfLink: string | URL;
+    url: string;
+    selfLink: string;
     title: string;
     content: string;
     author: Array<{
       id: string;
       displayName: string;
-      url: string | URL;
+      url: string;
       image: Array<{
-        url: string | URL;
+        url: string;
       }>;
     }>;
-    replies: Array<{
+    replies?: Array<{
       totalItems: string;
-      selfLink: string | URL;
+      selfLink: string;
     }>;
-    labels: Array<[string]>;
-    etag: string;
-  }>;
-  etag: string;
-};
-
-export type BlogPagesTypes = {
-  kind: string;
-  items: Array<{
-    kind: string;
-    id: string;
-    blog: Array<{
-      id: string;
-    }>;
-    published: string;
-    updated: string;
-    url: string | URL;
-    selfLink: string | URL;
-    title: string;
-    content: string;
-    author: Array<{
-      id: string;
-      displayName: string;
-      url: string | URL;
-      image: Array<{
-        url: string | URL;
-      }>;
-    }>;
+    labels?: Array<[string]>;
     etag: string;
   }>;
   etag: string;
