@@ -36,6 +36,9 @@ export type BlogItemsTypes = {
     url: string;
     selfLink: string;
     title: string;
+    images?: Array<{
+      url: string;
+    }>;
     content: string;
     author: Array<{
       id: string;
