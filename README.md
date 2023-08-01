@@ -6,11 +6,11 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### Blogs
 
-| Method     | HTTP request            | Description                 |
-| ---------- | ----------------------- | --------------------------- |
-| get        | GET /blogs/blogId       | Retrieves a blog by its ID. |
-| getByUrl   | GET /blogs/byurl        | Retrieves a blog by URL.    |
-| listByUser | GET /users/userId/blogs | Retrieves a list of blogs   |
+| Method     | HTTP request              | Description                 |
+| ---------- | ------------------------- | --------------------------- |
+| get        | `GET` /blogs/blogId       | Retrieves a blog by its ID. |
+| getByUrl   | `GET` /blogs/byurl        | Retrieves a blog by URL.    |
+| listByUser | `GET` /users/userId/blogs | Retrieves a list of blogs   |
 
 ```json
 {
@@ -40,15 +40,15 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### Comments
 
-| Method        | HTTP request                                                     | Description                                                                                                             |
-| ------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| list          | GET /blogs/blogId/posts/postId/comments                          | Retrieves the list of comments for a post.                                                                              |
-| get           | GET /blogs/blogId/posts/postId/comments/commentId                | Retrieves one comment resource by its commentId.                                                                        |
-| approve       | POST /blogs/blogId/posts/postId/comments/commentId/approve       | Marks a comment as not spam.                                                                                            |
-| delete        | DELETE /blogs/blogId/posts/postId/comments/commentId             | Delete a comment by ID.                                                                                                 |
-| listByBlog    | GET /blogs/blogId/comments                                       | Retrieves the comments for a blog, across all posts, possibly filtered.                                                 |
-| markAsSpam    | POST /blogs/blogId/posts/postId/comments/commentId/spam          | Marks a comment as spam. This will set the status of the comment to spam, and hide it in the default comment rendering. |
-| removeContent | POST /blogs/blogId/posts/postId/comments/commentId/removecontent | Removes the content of a comment.                                                                                       |
+| Method        | HTTP request                                                       | Description                                                                                                             |
+| ------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| list          | `GET` /blogs/blogId/posts/postId/comments                          | Retrieves the list of comments for a post.                                                                              |
+| get           | `GET` /blogs/blogId/posts/postId/comments/commentId                | Retrieves one comment resource by its commentId.                                                                        |
+| approve       | `POST` /blogs/blogId/posts/postId/comments/commentId/approve       | Marks a comment as not spam.                                                                                            |
+| delete        | `DELETE` /blogs/blogId/posts/postId/comments/commentId             | Delete a comment by ID.                                                                                                 |
+| listByBlog    | `GET` /blogs/blogId/comments                                       | Retrieves the comments for a blog, across all posts, possibly filtered.                                                 |
+| markAsSpam    | `POST` /blogs/blogId/posts/postId/comments/commentId/spam          | Marks a comment as spam. This will set the status of the comment to spam, and hide it in the default comment rendering. |
+| removeContent | `POST` /blogs/blogId/posts/postId/comments/commentId/removecontent | Removes the content of a comment.                                                                                       |
 
 ```json
 {
@@ -81,14 +81,14 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### Pages
 
-| Method | HTTP request                      | Description                                          |
-| ------ | --------------------------------- | ---------------------------------------------------- |
-| list   | GET /blogs/blogId/pages           | Retrieves the list of pages for a blog.              |
-| get    | GET /blogs/blogId/pages/pageId    | Retrieves one pages resource by its page ID.         |
-| delete | DELETE /blogs/blogId/pages/pageId | Delete a page by ID.                                 |
-| insert | POST /blogs/blogId/pages          | Add a page.                                          |
-| patch  | PATCH /blogs/blogId/pages/pageId  | Update a page. This method supports patch semantics. |
-| update | PUT /blogs/blogId/pages/pageId    | Update a page.                                       |
+| Method | HTTP request                        | Description                                          |
+| ------ | ----------------------------------- | ---------------------------------------------------- |
+| list   | `GET` /blogs/blogId/pages           | Retrieves the list of pages for a blog.              |
+| get    | `GET` /blogs/blogId/pages/pageId    | Retrieves one pages resource by its page ID.         |
+| delete | `DELETE` /blogs/blogId/pages/pageId | Delete a page by ID.                                 |
+| insert | `POST` /blogs/blogId/pages          | Add a page.                                          |
+| patch  | `PATCH` /blogs/blogId/pages/pageId  | Update a page. This method supports patch semantics. |
+| update | `PUT` /blogs/blogId/pages/pageId    | Update a page.                                       |
 
 ```json
 {
@@ -117,18 +117,18 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### Posts
 
-| Method    | HTTP request                            | Description                                                                                                     |
-| --------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| list      | GET /blogs/blogId/posts                 | Retrieves a list of posts.                                                                                      |
-| get       | GET /blogs/blogId/posts/postId          | Retrieves one post by post ID.                                                                                  |
-| search    | GET /blogs/blogId/posts/search          | Searches for a post that matches the given query terms.                                                         |
-| insert    | POST /blogs/blogId/posts                | Adds a post.                                                                                                    |
-| delete    | DELETE /blogs/blogId/posts/postId       | Deletes a post by ID.                                                                                           |
-| getByPath | GET /blogs/blogId/posts/bypath          | Retrieves a post by path.                                                                                       |
-| patch     | PATCH /blogs/blogId/posts/postId        | Updates a post. This method supports patch semantics.                                                           |
-| update    | PUT /blogs/blogId/posts/postId          | Updates a post.                                                                                                 |
-| publish   | POST /blogs/blogId/posts/postId/publish | Publish a draft post.                                                                                           |
-| revert    | POST /blogs/blogId/posts/postId/revert  | Revert a published or scheduled post to draft state, which removes the post from the publicly viewable content. |
+| Method    | HTTP request                              | Description                                                                                                     |
+| --------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| list      | `GET` /blogs/blogId/posts                 | Retrieves a list of posts.                                                                                      |
+| get       | `GET` /blogs/blogId/posts/postId          | Retrieves one post by post ID.                                                                                  |
+| search    | `GET` /blogs/blogId/posts/search          | Searches for a post that matches the given query terms.                                                         |
+| insert    | `POST` /blogs/blogId/posts                | Adds a post.                                                                                                    |
+| delete    | `DELETE` /blogs/blogId/posts/postId       | Deletes a post by ID.                                                                                           |
+| getByPath | `GET` /blogs/blogId/posts/bypath          | Retrieves a post by path.                                                                                       |
+| patch     | `PATCH` /blogs/blogId/posts/postId        | Updates a post. This method supports patch semantics.                                                           |
+| update    | `PUT` /blogs/blogId/posts/postId          | Updates a post.                                                                                                 |
+| publish   | `POST` /blogs/blogId/posts/postId/publish | Publish a draft post.                                                                                           |
+| revert    | `POST` /blogs/blogId/posts/postId/revert  | Revert a published or scheduled post to draft state, which removes the post from the publicly viewable content. |
 
 ```json
 {
@@ -180,9 +180,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### Users
 
-| Method | HTTP request      | Description                  |
-| ------ | ----------------- | ---------------------------- |
-| get    | GET /users/userId | Retrieves a user by user ID. |
+| Method | HTTP request        | Description                  |
+| ------ | ------------------- | ---------------------------- |
+| get    | `GET` /users/userId | Retrieves a user by user ID. |
 
 ```json
 {
@@ -206,9 +206,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### BlogUserInfos
 
-| Method | HTTP request                   | Description                                            |
-| ------ | ------------------------------ | ------------------------------------------------------ |
-| get    | GET /users/userId/blogs/blogId | Gets one blog and user info pair by blogId and userId. |
+| Method | HTTP request                     | Description                                            |
+| ------ | -------------------------------- | ------------------------------------------------------ |
+| get    | `GET` /users/userId/blogs/blogId | Gets one blog and user info pair by blogId and userId. |
 
 ```json
 {
@@ -226,9 +226,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### PageViews
 
-| Method | HTTP request                | Description                         |
-| ------ | --------------------------- | ----------------------------------- |
-| get    | GET /blogs/blogId/pageviews | Retrieve pageview stats for a Blog. |
+| Method | HTTP request                  | Description                         |
+| ------ | ----------------------------- | ----------------------------------- |
+| get    | `GET` /blogs/blogId/pageviews | Retrieve pageview stats for a Blog. |
 
 ```json
 {
@@ -245,10 +245,10 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 
 ### PostsUserInfos
 
-| Method | HTTP request                                | Description                                                                                                                                                                         |
-| ------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| get    | GET /users/userId/blogs/blogId/posts/postId | Gets one post and user info pair by postId and userId.                                                                                                                              |
-| list   | GET /users/userId/blogs/blogId/posts        | Retrieves a list of post and post user info pairs, possibly filtered. The post user info contains per-user information about the post, such as access rights, specific to the user. |
+| Method | HTTP request                                  | Description                                                                                                                                                                         |
+| ------ | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| get    | `GET` /users/userId/blogs/blogId/posts/postId | Gets one post and user info pair by postId and userId.                                                                                                                              |
+| list   | `GET` /users/userId/blogs/blogId/posts        | Retrieves a list of post and post user info pairs, possibly filtered. The post user info contains per-user information about the post, such as access rights, specific to the user. |
 
 ```json
 {
@@ -264,4 +264,14 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
-Fun fact: [Blogger](https://blogger.com/) was the first platform that led me here.
+Source:
+
+- [API Reference v3.0](https://developers.google.com/blogger/docs/3.0/reference).
+- [Blogs](https://developers.google.com/blogger/docs/3.0/reference/blogs).
+- [Comments](https://developers.google.com/blogger/docs/3.0/reference/comments).
+- [Pages](https://developers.google.com/blogger/docs/3.0/reference/pages).
+- [Posts](https://developers.google.com/blogger/docs/3.0/reference/posts).
+- [Users](https://developers.google.com/blogger/docs/3.0/reference/users).
+- [BlogUserInfos](https://developers.google.com/blogger/docs/3.0/reference/blogUserInfos).
+- [PageViews](https://developers.google.com/blogger/docs/3.0/reference/pageViews).
+- [PostUserInfos](https://developers.google.com/blogger/docs/3.0/reference/postUserInfos).
