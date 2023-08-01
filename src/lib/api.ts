@@ -3,7 +3,7 @@ const blogApi = {
   _key: "?key=AIzaSyCtHRhfeAkoD_fALu93VAUydDDI8XqZWtM",
   _posts: "posts",
   _postsParams:
-    "&fetchBodies=false&fetchImages=false&orderBy=updated&status=live",
+    "&fetchBodies=false&fetchImages=true&orderBy=updated&status=live",
   _pages: "pages",
   _pagesParams: "&fetchBodies=false&status=live",
 };
