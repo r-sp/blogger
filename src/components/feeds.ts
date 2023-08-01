@@ -12,6 +12,13 @@ export function Feeds({ blog }: { blog: BlogItemsTypes }) {
     link.setAttribute("href", post.url);
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "nofollow noopener");
+    if (post.images) {
+      const images = post.images.map((img) => {
+        const image = createElement(link, "img", "thumbnail");
+        image.setAttribute("alt", post.title);
+        image.setAttribute("src", img.url);
+      });
+    }
     return link;
   });
   return posts;
