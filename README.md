@@ -12,6 +12,32 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | getByUrl   | GET /blogs/byurl        | Retrieves a blog by URL.    |
 | listByUser | GET /users/userId/blogs | Retrieves a list of blogs   |
 
+```json
+{
+  "kind": "blogger#blog",
+  "id": value,
+  "name": value,
+  "description": value,
+  "published": value,
+  "updated": value,
+  "url": value,
+  "selfLink": value,
+  "posts": {
+    "totalItems": value,
+    "selfLink": value
+  },
+  "pages": {
+    "totalItems": value,
+    "selfLink": value
+  },
+  "locale": {
+    "language": value,
+    "country": value,
+    "variant": value
+  }
+}
+```
+
 ### Comments
 
 | Method        | HTTP request                                                     | Description                                                                                                             |
@@ -24,6 +50,35 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | markAsSpam    | POST /blogs/blogId/posts/postId/comments/commentId/spam          | Marks a comment as spam. This will set the status of the comment to spam, and hide it in the default comment rendering. |
 | removeContent | POST /blogs/blogId/posts/postId/comments/commentId/removecontent | Removes the content of a comment.                                                                                       |
 
+```json
+{
+  "kind": "blogger#comment",
+  "status": string,
+  "id": string,
+  "inReplyTo": {
+    "id": string
+  },
+  "post": {
+    "id": string
+  },
+  "blog": {
+    "id": string
+  },
+  "published": datetime,
+  "updated": datetime,
+  "selfLink": string,
+  "content": string,
+  "author": {
+    "id": string,
+    "displayName": string,
+    "url": string,
+    "image": {
+      "url": string
+    }
+  }
+}
+```
+
 ### Pages
 
 | Method | HTTP request                      | Description                                          |
@@ -34,6 +89,31 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | insert | POST /blogs/blogId/pages          | Add a page.                                          |
 | patch  | PATCH /blogs/blogId/pages/pageId  | Update a page. This method supports patch semantics. |
 | update | PUT /blogs/blogId/pages/pageId    | Update a page.                                       |
+
+```json
+{
+  "kind": "blogger#page",
+  "id": string,
+  "status": string,
+  "blog": {
+    "id": string
+  },
+  "published": datetime,
+  "updated": datetime,
+  "url": string,
+  "selfLink": string,
+  "title": string,
+  "content": string,
+  "author": {
+    "id": string,
+    "displayName": string,
+    "url": string,
+    "image": {
+      "url": string
+    }
+  }
+}
+```
 
 ### Posts
 
@@ -50,11 +130,79 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | publish   | POST /blogs/blogId/posts/postId/publish | Publish a draft post.                                                                                           |
 | revert    | POST /blogs/blogId/posts/postId/revert  | Revert a published or scheduled post to draft state, which removes the post from the publicly viewable content. |
 
+```json
+{
+  "kind": "blogger#post",
+  "id": string,
+  "blog": {
+    "id": string
+  },
+  "published": datetime,
+  "updated": datetime,
+  "url": string,
+  "selfLink": string,
+  "title": string,
+  "titleLink": string,
+  "content": string,
+  "images": [
+    {
+      "url": string
+    }
+  ],
+  "customMetaData": string,
+  "author": {
+    "id": string,
+    "displayName": string,
+    "url": string,
+    "image": {
+      "url": string
+    }
+  },
+  "replies": {
+    "totalItems": long,
+    "selfLink": string,
+    "items": [
+      comments Resource
+    ]
+  },
+  "labels": [
+    string
+  ],
+  "location": {
+    "name": string,
+    "lat": double,
+    "lng": double,
+    "span": string
+  },
+  "status": string
+}
+```
+
 ### Users
 
 | Method | HTTP request      | Description                  |
 | ------ | ----------------- | ---------------------------- |
 | get    | GET /users/userId | Retrieves a user by user ID. |
+
+```json
+{
+  "kind": "blogger#user",
+  "id": string,
+  "created": datetime,
+  "url": string,
+  "selfLink": string,
+  "blogs": {
+    "selfLink": string
+  },
+  "displayName": string,
+  "about": string,
+  "locale": {
+    "language": string,
+    "country": string,
+    "variant": string
+  }
+}
+```
 
 ### BlogUserInfos
 
@@ -62,11 +210,38 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | ------ | ------------------------------ | ------------------------------------------------------ |
 | get    | GET /users/userId/blogs/blogId | Gets one blog and user info pair by blogId and userId. |
 
+```json
+{
+  "kind": "blogger#blogUserInfo",
+  "blog": blogs Resource,
+  "blog_user_info": {
+    "kind": "blogger#blogPerUserInfo",
+    "userId": string,
+    "blogId": string,
+    "photosAlbumKey": string,
+    "hasAdminAccess": boolean
+  }
+}
+```
+
 ### PageViews
 
 | Method | HTTP request                | Description                         |
 | ------ | --------------------------- | ----------------------------------- |
 | get    | GET /blogs/blogId/pageviews | Retrieve pageview stats for a Blog. |
+
+```json
+{
+  "kind": "blogger#page_views",
+  "blogId": long,
+  "counts": [
+    {
+      "timeRange": string,
+      "count": long
+    }
+  ]
+}
+```
 
 ### PostsUserInfos
 
@@ -74,5 +249,19 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | ------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | get    | GET /users/userId/blogs/blogId/posts/postId | Gets one post and user info pair by postId and userId.                                                                                                                              |
 | list   | GET /users/userId/blogs/blogId/posts        | Retrieves a list of post and post user info pairs, possibly filtered. The post user info contains per-user information about the post, such as access rights, specific to the user. |
+
+```json
+{
+  "kind": "blogger#postUserInfo",
+  "post": posts Resource,
+  "post_user_info": {
+    "kind": "blogger#postPerUserInfo",
+    "userId": string,
+    "blogId": string,
+    "postId": string,
+    "hasEditAccess": boolean
+  }
+}
+```
 
 Fun fact: [Blogger](https://blogger.com/) was the first platform that led me here.
