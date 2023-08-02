@@ -12,6 +12,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | getByUrl   | `GET` /blogs/byurl        | Retrieves a blog by URL.    |
 | listByUser | `GET` /users/userId/blogs | Retrieves a list of blogs   |
 
+<details>
+  <summary>View API</summary>
+
 ```json
 {
   "kind": "blogger#blog",
@@ -38,6 +41,10 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### Comments
 
 | Method        | HTTP request                                                       | Description                                                                                                             |
@@ -49,6 +56,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | listByBlog    | `GET` /blogs/blogId/comments                                       | Retrieves the comments for a blog, across all posts, possibly filtered.                                                 |
 | markAsSpam    | `POST` /blogs/blogId/posts/postId/comments/commentId/spam          | Marks a comment as spam. This will set the status of the comment to spam, and hide it in the default comment rendering. |
 | removeContent | `POST` /blogs/blogId/posts/postId/comments/commentId/removecontent | Removes the content of a comment.                                                                                       |
+
+<details>
+  <summary>View API</summary>
 
 ```json
 {
@@ -79,6 +89,10 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### Pages
 
 | Method | HTTP request                        | Description                                          |
@@ -89,6 +103,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | insert | `POST` /blogs/blogId/pages          | Add a page.                                          |
 | patch  | `PATCH` /blogs/blogId/pages/pageId  | Update a page. This method supports patch semantics. |
 | update | `PUT` /blogs/blogId/pages/pageId    | Update a page.                                       |
+
+<details>
+  <summary>View API</summary>
 
 ```json
 {
@@ -115,6 +132,10 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### Posts
 
 | Method    | HTTP request                              | Description                                                                                                     |
@@ -129,6 +150,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | update    | `PUT` /blogs/blogId/posts/postId          | Updates a post.                                                                                                 |
 | publish   | `POST` /blogs/blogId/posts/postId/publish | Publish a draft post.                                                                                           |
 | revert    | `POST` /blogs/blogId/posts/postId/revert  | Revert a published or scheduled post to draft state, which removes the post from the publicly viewable content. |
+
+<details>
+  <summary>View API</summary>
 
 ```json
 {
@@ -178,11 +202,18 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### Users
 
 | Method | HTTP request        | Description                  |
 | ------ | ------------------- | ---------------------------- |
 | get    | `GET` /users/userId | Retrieves a user by user ID. |
+
+<details>
+  <summary>View API</summary>
 
 ```json
 {
@@ -204,11 +235,18 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### BlogUserInfos
 
 | Method | HTTP request                     | Description                                            |
 | ------ | -------------------------------- | ------------------------------------------------------ |
 | get    | `GET` /users/userId/blogs/blogId | Gets one blog and user info pair by blogId and userId. |
+
+<details>
+  <summary>View API</summary>
 
 ```json
 {
@@ -224,11 +262,18 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### PageViews
 
 | Method | HTTP request                  | Description                         |
 | ------ | ----------------------------- | ----------------------------------- |
 | get    | `GET` /blogs/blogId/pageviews | Retrieve pageview stats for a Blog. |
+
+<details>
+  <summary>View API</summary>
 
 ```json
 {
@@ -243,6 +288,10 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 }
 ```
 
+</details>
+
+---
+
 ### PostsUserInfos
 
 | Method | HTTP request                                  | Description                                                                                                                                                                         |
@@ -250,6 +299,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 | get    | `GET` /users/userId/blogs/blogId/posts/postId | Gets one post and user info pair by postId and userId.                                                                                                                              |
 | list   | `GET` /users/userId/blogs/blogId/posts        | Retrieves a list of post and post user info pairs, possibly filtered. The post user info contains per-user information about the post, such as access rights, specific to the user. |
 
+<details>
+  <summary>View API</summary>
+  
 ```json
 {
   "kind": "blogger#postUserInfo",
@@ -263,6 +315,9 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
   }
 }
 ```
+</details>
+
+---
 
 Source:
 
