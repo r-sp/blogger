@@ -1,0 +1,15 @@
+---
+import { apiBlogURL } from "../api";
+import type { OriginTypes } from "../api/types";
+
+const response = await fetch(apiBlogURL.apiBlogs,{method: "GET", headers: {"Content-Type":"application/json"}});
+
+const json: OriginTypes = await response.json();
+
+const { name } = json;
+
+---
+
+<header>
+    <h1>{name}</h1>
+</header>
