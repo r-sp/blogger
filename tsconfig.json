@@ -1,21 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "ignoreDeprecations": "5.0",
-    "importsNotUsedAsValues": "error",
-    "allowJs": false,
-    "pretty": true,
-    "strict": true
-  },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["dist", "node_modules"]
+    "verbatimModuleSyntax": true
+  }
 }

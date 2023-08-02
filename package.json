@@ -4,16 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "js:build": "rollup --c rollup.config.js",
-    "js:watch": "rollup --c rollup.config.js -w"
+    "dev": "astro dev",
+    "build": "astro check && tsc --noEmit && astro build",
+    "check": "astro check && tsc --noEmit",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.3",
-    "@rollup/plugin-typescript": "^11.1.2",
-    "rollup": "^3.26.3",
-    "vite": "^4.4.4"
+    "astro": "^2.9.7"
   }
 }

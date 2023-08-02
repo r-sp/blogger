@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import { apiBlogURL } from "../api";
+---
+
+<Layout>
+    <h1>Blogger</h1>
+    <ul>
+        <li><a href={apiBlogURL.apiBlogs} target="_blank" rel="noopener">Blog</a></li>
+        <li><a href={apiBlogURL.apiPosts} target="_blank" rel="noopener">Posts</a></li>
+        <li><a href={apiBlogURL.apiPages} target="_blank" rel="noopener">Pages</a></li>
+    </ul>
+</Layout>
