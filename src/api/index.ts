@@ -1,36 +1,29 @@
-const blogId = "4252532404171836550";
-const apiKey = "AIzaSyCtHRhfeAkoD_fALu93VAUydDDI8XqZWtM";
+import config from "./config";
 
-let apiv3Blogs = new URL(
-  `https://www.googleapis.com/blogger/v3/blogs/${blogId}?`
-);
-let blogParams = new URLSearchParams(apiv3Blogs.search);
-blogParams.set("key", apiKey);
+let getApiBlogs = new URL(`${config.apiUrl}/${config.blogId}?`);
+let blogsParam = new URLSearchParams(getApiBlogs.search);
+blogsParam.set("key", config.apiKey);
 
-let apiv3Posts = new URL(
-  `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?`
-);
-let postParams = new URLSearchParams(apiv3Posts.search);
-postParams.set("fetchBodies", "false");
-postParams.set("fetchImages", "true");
-postParams.set("orderBy", "updated");
-postParams.set("status", "live");
-postParams.set("key", apiKey);
+let getApiPosts = new URL(`${config.apiUrl}/${config.blogId}/posts?`);
+let postsParam = new URLSearchParams(getApiPosts.search);
+postsParam.set("fetchBodies", "false");
+postsParam.set("fetchImages", "true");
+postsParam.set("orderBy", "updated");
+postsParam.set("status", "live");
+postsParam.set("key", config.apiKey);
 
-let apiv3Pages = new URL(
-  `https://www.googleapis.com/blogger/v3/blogs/${blogId}/pages?`
-);
-let pageParams = new URLSearchParams(apiv3Pages.search);
-pageParams.set("fetchBodies", "false");
-pageParams.set("status", "live");
-pageParams.set("key", apiKey);
+let getApiPages = new URL(`${config.apiUrl}/${config.blogId}/pages?`);
+let pagesParam = new URLSearchParams(getApiPages.search);
+pagesParam.set("fetchBodies", "false");
+pagesParam.set("status", "live");
+pagesParam.set("key", config.apiKey);
 
-const apiBlogs = new URL(apiv3Blogs + blogParams.toString());
-const apiPosts = new URL(apiv3Posts + postParams.toString());
-const apiPages = new URL(apiv3Pages + pageParams.toString());
+const blogs = new URL(getApiBlogs + blogsParam.toString());
+const posts = new URL(getApiPosts + postsParam.toString());
+const pages = new URL(getApiPages + pagesParam.toString());
 
-export const apiBlogURL = {
-  apiBlogs,
-  apiPosts,
-  apiPages,
+export const apiBlogUrl = {
+  blogs,
+  posts,
+  pages,
 };
