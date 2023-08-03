@@ -8,7 +8,7 @@ let getApiPosts = new URL(`${config.apiUrl}/${config.blogId}/posts?`);
 let postsParam = new URLSearchParams(getApiPosts.search);
 postsParam.set("fetchBodies", "false");
 postsParam.set("fetchImages", "true");
-postsParam.set("orderBy", "updated");
+postsParam.set("orderBy", "published");
 postsParam.set("status", "live");
 postsParam.set("key", config.apiKey);
 
