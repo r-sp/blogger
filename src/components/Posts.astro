@@ -1,0 +1,19 @@
+---
+import { apiBlogUrl } from "../api";
+import type { BlogItemsTypes } from "../api/types";
+
+const response = await fetch(apiBlogUrl.posts,{method: "GET", headers: {"Content-Type":"application/json"}});
+
+const json: BlogItemsTypes = await response.json();
+
+const { items, nextPageToken } = json;
+---
+
+<h3>Posts</h3>
+<ul>
+    {
+        items.map((post)=>{
+            <li>{post}</li>
+        })
+    }
+</ul>

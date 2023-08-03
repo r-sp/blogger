@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Info from "../components/Info.astro";
+import Posts from "../components/Posts.astro";
 
 import { apiBlogUrl } from "../api";
 ---
@@ -13,4 +14,5 @@ import { apiBlogUrl } from "../api";
         <li><a href={apiBlogUrl.pages} target="_blank" rel="noopener">Pages</a></li>
     </ul>
     <Info />
+    <Posts />
 </Layout>
