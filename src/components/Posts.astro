@@ -12,8 +12,11 @@ const { items, nextPageToken } = json;
 <h3>Posts</h3>
 <ul>
     {
-        items.map((post)=>{
-            <li>{post}</li>
-        })
+        items.map((post)=>(
+            <li>
+                <time datetime={post.published}>{new Date(post.published).toLocaleString()}</time>
+                <a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a>
+            </li>
+        ))
     }
 </ul>
