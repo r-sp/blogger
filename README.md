@@ -17,6 +17,80 @@ All commands are run from the root of the project, from a terminal:
 
 This [API reference](https://developers.google.com/blogger/docs/3.0/reference) is organized by resource type. Each resource type has one or more data representations and one or more methods.
 
+<details>
+  <summary>Blog</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/blogs)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/blogs/get)
+- [getByUrl](https://developers.google.com/blogger/docs/3.0/reference/blogs/getByUrl)
+- [listByUser](https://developers.google.com/blogger/docs/3.0/reference/blogs/listByUser)
+</details>
+<details>
+  <summary>Comments</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/comments)
+- [list](https://developers.google.com/blogger/docs/3.0/reference/comments/list)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/comments/get)
+- [approve](https://developers.google.com/blogger/docs/3.0/reference/comments/approve)
+- [delete](https://developers.google.com/blogger/docs/3.0/reference/comments/delete)
+- [listByBlog](https://developers.google.com/blogger/docs/3.0/reference/comments/listByBlog)
+- [markAsSpam](https://developers.google.com/blogger/docs/3.0/reference/comments/markAsSpam)
+- [removeContent](https://developers.google.com/blogger/docs/3.0/reference/comments/removeContent)
+</details>
+<details>
+  <summary>Pages</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/pages)
+- [list](https://developers.google.com/blogger/docs/3.0/reference/pages/list)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/pages/get)
+- [delete](https://developers.google.com/blogger/docs/3.0/reference/pages/delete)
+- [insert](https://developers.google.com/blogger/docs/3.0/reference/pages/insert)
+- [patch](https://developers.google.com/blogger/docs/3.0/reference/pages/patch)
+- [update](https://developers.google.com/blogger/docs/3.0/reference/pages/update)
+</details>
+<details>
+  <summary>Posts</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/posts)
+- [list](https://developers.google.com/blogger/docs/3.0/reference/posts/list)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/posts/get)
+- [search](https://developers.google.com/blogger/docs/3.0/reference/posts/search)
+- [delete](https://developers.google.com/blogger/docs/3.0/reference/posts/delete)
+- [getByPath](https://developers.google.com/blogger/docs/3.0/reference/posts/getByPath)
+- [insert](https://developers.google.com/blogger/docs/3.0/reference/posts/insert)
+- [patch](https://developers.google.com/blogger/docs/3.0/reference/posts/patch)
+- [update](https://developers.google.com/blogger/docs/3.0/reference/posts/update)
+- [publish](https://developers.google.com/blogger/docs/3.0/reference/posts/publish)
+- [revert](https://developers.google.com/blogger/docs/3.0/reference/posts/revert)
+</details>
+<details>
+  <summary>Users</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/users)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/users/get)
+</details>
+<details>
+  <summary>BlogUserInfos</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/blogUserInfos)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/blogUserInfos/get)
+</details>
+<details>
+  <summary>PageViews</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/pageViews)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/pageViews/get)
+</details>
+<details>
+  <summary>PostUserInfos</summary>
+
+- [overview](https://developers.google.com/blogger/docs/3.0/reference/postUserInfos)
+- [get](https://developers.google.com/blogger/docs/3.0/reference/postUserInfos/get)
+- [list](https://developers.google.com/blogger/docs/3.0/reference/postUserInfos/list)
+</details>
+
+---
+
 ### Blogs
 
 | Method     | HTTP request              | Description                 |
@@ -335,11 +409,3 @@ This [API reference](https://developers.google.com/blogger/docs/3.0/reference) i
 Source:
 
 - [API Reference v3.0](https://developers.google.com/blogger/docs/3.0/reference).
-- [Blogs](https://developers.google.com/blogger/docs/3.0/reference/blogs).
-- [Comments](https://developers.google.com/blogger/docs/3.0/reference/comments).
-- [Pages](https://developers.google.com/blogger/docs/3.0/reference/pages).
-- [Posts](https://developers.google.com/blogger/docs/3.0/reference/posts).
-- [Users](https://developers.google.com/blogger/docs/3.0/reference/users).
-- [BlogUserInfos](https://developers.google.com/blogger/docs/3.0/reference/blogUserInfos).
-- [PageViews](https://developers.google.com/blogger/docs/3.0/reference/pageViews).
-- [PostUserInfos](https://developers.google.com/blogger/docs/3.0/reference/postUserInfos).
