@@ -1,0 +1,22 @@
+---
+import { apiBlogUrl } from "../api";
+import type { BlogItemsTypes } from "../api/types";
+
+const response = await fetch(apiBlogUrl.pages,{method: "GET", headers: {"Content-Type":"application/json"}});
+
+const json: BlogItemsTypes = await response.json();
+
+const { items } = json;
+---
+
+<h3>Pages</h3>
+<ul>
+    {
+        items.map((post)=>(
+            <li>
+                <time datetime={post.published}>{new Date(post.published).toLocaleString()}</time>
+                <a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a>
+            </li>
+        ))
+    }
+</ul>
