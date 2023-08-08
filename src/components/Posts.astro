@@ -1,12 +1,8 @@
 ---
 import { apiBlogUrl } from "../api";
-import type { BlogItemsTypes } from "../api/types";
+import { fetchPosts } from "../utils/posts";
 
-const response = await fetch(apiBlogUrl.posts,{method: "GET", headers: {"Content-Type":"application/json"}});
-
-const json: BlogItemsTypes = await response.json();
-
-const { items, nextPageToken } = json;
+const { items, nextPageToken } = await fetchPosts(apiBlogUrl.posts);
 ---
 
 <h3>Posts</h3>
