@@ -1,0 +1,14 @@
+---
+interface Props {
+    title: string
+    url: string
+    published: string
+}
+
+const { title, url, published } = Astro.props as Props;
+---
+
+<div class="items">
+    <time datetime={published}>{new Date(published).toLocaleString()}</time>
+    <h3 class="item-title"><a href={url} target="_blank" rel="noopener noreferrer">{title}</a></h3>
+</div>

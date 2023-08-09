@@ -1,6 +1,7 @@
 ---
 import { apiBlogUrl } from "../api";
 import { fetchPosts } from "../utils/posts";
+import Items from "./Items.astro";
 
 const { items, nextPageToken } = await fetchPosts(apiBlogUrl.posts);
 ---
@@ -10,8 +11,7 @@ const { items, nextPageToken } = await fetchPosts(apiBlogUrl.posts);
     {
         items.map((post)=>(
             <li>
-                <time datetime={post.published}>{new Date(post.published).toLocaleString()}</time>
-                <a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a>
+                <Items title={post.title} url={post.url} published={post.published} />
             </li>
         ))
     }
